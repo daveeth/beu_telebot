@@ -6,8 +6,9 @@ lifting required to keep track of orders and users.
 
 
 Two bots drive the engine of this telebot application
-  -[beu bot](https://t.me/our_beu_delivery_bot)
-  -[beu admin bot](https://t.me/beu_admin_bot)
+
+  - [beu bot](https://t.me/our_beu_delivery_bot)
+  - [beu admin bot](https://t.me/beu_admin_bot)
   
 At first, nearly anyone who knows the links to th two bots can gain access to both of them. Telegram bot APIs use TelegramStates to transition   
 between several states that exist inherently between a user and a bot. So, th bot asks a totally different question with varying response when    
