@@ -1,0 +1,16 @@
+{% extends 'beu_admin_bot/base.html' %}
+
+{% block title %}
+	foods
+{% endblock title %}
+
+{% block body %}
+    {% for food in foods %}
+        <div class="card m-3" style="width: 30rem">
+            <div class="card-body">
+                <p>Food {{food.name}}</p>
+	    	    <p>Price : {{food.price}} </p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock body %}

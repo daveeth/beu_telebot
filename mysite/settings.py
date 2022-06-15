@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_tgbot',
     'our_beu_delivery_bot',
     'beu_admin_bot',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +135,4 @@ MEDIA_ROOT = '/home/dave94/mysite/media'
 MEDIA_URL = '/media/'
 STATIC_ROOT = '/home/dave94/mysite/static'
 STATIC_URL = '/static/'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

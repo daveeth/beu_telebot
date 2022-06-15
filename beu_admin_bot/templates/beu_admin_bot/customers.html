@@ -1,0 +1,18 @@
+{% extends 'beu_admin_bot/base.html' %}
+
+{% block title %}
+	Customers
+{% endblock title %}
+
+{% block body %}
+    {% for customer in customers %}
+        <div class="card m-3" style="width: 30rem">
+            <div class="card-body">
+                <p>Username: {{customer.username}}</p>
+    	    	<p>First Name : {{customer.first_name}} </p>
+    	    	<p>Last Name : {{customer.last_name}}</p>
+
+            </div>
+        </div>
+    {% endfor %}
+{% endblock body %}

@@ -25,13 +25,15 @@ class Restaurant(models.Model):
     name=models.TextField()
 
 class Food(models.Model):
-    name=models.TextField()
-    price=models.DecimalField(default=0.0, decimal_places=2, max_digits=6)
+    name=models.CharField(max_length = 12)
+    price=models.FloatField(default=0)
     rest=models.ForeignKey(Restaurant, on_delete=models.CASCADE)
 
 class Order(models.Model):
     order_by=models.ForeignKey(TelegramUser, on_delete=models.SET_NULL, null = True)
     item=models.TextField()
+    accepted=models.BooleanField(default=False)
+    prepared=models.BooleanField(default=False)
     quantity=models.IntegerField(default=0)
     restaurant=models.ForeignKey(Restaurant, on_delete=models.CASCADE)
     ordered_at=models.DateTimeField(auto_now_add=True)

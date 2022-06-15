@@ -1,0 +1,31 @@
+{% extends 'beu_admin_bot/base.html' %}
+
+{% block title %}
+	Orders
+{% endblock title %}
+
+{% block body %}
+    {% for order in orders %}
+        <div class="card m-3">
+            <div class="card-body ">
+                <p>Ordered by {{order.order_by}}</p>
+
+    	    	<p>Food item : {{order.item}} </p>
+
+
+    	    	<p>Quantity : {{order.quantity}} </p>
+
+
+    	    	<p>Subtotal : no subtotals for now, folks</p>
+
+
+    	    	<a href="{% url 'accept' p order.id %}" class="btn btn-primary">Accept</a>
+
+    	    	<a href="{% url 'decline' p order.id %}" class="btn btn-danger">Decline</a>
+
+            </div>
+
+
+        </div>
+    {% endfor %}
+{% endblock body %}

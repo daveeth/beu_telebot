@@ -8,7 +8,7 @@ from django_tgbot.types.keyboardbutton import KeyboardButton
 from django_tgbot.types.replykeyboardmarkup import ReplyKeyboardMarkup
 from django_tgbot.types.inlinekeyboardbutton import InlineKeyboardButton
 from django_tgbot.types.inlinekeyboardmarkup import InlineKeyboardMarkup
-from our_beu_delivery_bot.models import Order, Restaurant
+from our_beu_delivery_bot.models import Restaurant
 
 @processor(state_manager, success='asked_for_contact', message_types=[message_types.Text])
 def initial_setup(bot: TelegramBot, update: Update, state: TelegramState):
@@ -51,9 +51,9 @@ def get_contact(bot, update, state):
                     one_time_keyboard=True,
                     resize_keyboard=True,
                     keyboard=[
-                        [KeyboardButton.a('Add new food to catalogue')],
                         [KeyboardButton.a('View pending orders')],
-                        [KeyboardButton.a('Visit admin webpage')]
+                        [KeyboardButton.a('Visit admin webpage')],
+                        [KeyboardButton.a('Add new food to catalogue')]
                     ]
                 )
             )
@@ -64,7 +64,7 @@ def get_contact(bot, update, state):
         bot.sendMessage(chat_id, "This is the admin bot for another bot which enables users to submit orders for restaurants (:")
         bot.sendMessage(
             chat_id,
-            text='This is the bot for users to submit orders',
+            text='This is the bot for users to submit orders, use this instead!',
             reply_markup=InlineKeyboardMarkup.a(
                 inline_keyboard=[
                     [
@@ -79,15 +79,31 @@ def get_contact(bot, update, state):
 def admin_dashboard(bot, update, state):
     chat_id = update.get_chat().get_id()
     text = update.get_message().get_text()
-    if text == 'Visit admin webpage':
-        bot.sendMessage(chat_id, "Dashboard")
+    my_rest = Restaurant.objects.get(name = state.get_memory()['rest'])
+
+    if text == 'Add new food to catalogue':
+        bot.sendMessage(chat_id, "Add from the webpage")
         bot.sendMessage(
             chat_id,
-            text='Click this butto to surf to the admin site',
+            text='Click this button to add new food',
             reply_markup=InlineKeyboardMarkup.a(
                 inline_keyboard=[
                     [
-                        InlineKeyboardButton.a('Admin Page', url='https://dave94.pythonanywhere.com/admin'),
+                        InlineKeyboardButton.a('Admin page for new food entry', url=f'https://dave94.pythonanywhere.com/beu_admin_bot/dashboard/{my_rest.phone_num}/foods/new'),
+
+                    ]
+                ]
+            )
+        )
+
+    if text == 'Visit admin webpage':
+        bot.sendMessage(
+            chat_id,
+            text='Click this button to surf to the admin site',
+            reply_markup=InlineKeyboardMarkup.a(
+                inline_keyboard=[
+                    [
+                        InlineKeyboardButton.a('Admin Page', url=f'https://dave94.pythonanywhere.com/beu_admin_bot/dashboard/{my_rest.phone_num}/'),
 
                     ]
                 ]
