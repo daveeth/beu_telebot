@@ -14,7 +14,7 @@ between several states that exist inherently between a user and a bot. So, th bo
 a user encounters for the first time and anytime afterwards.
 
 The first bot is recommended to be publicly availabel, and user can be asked questions about a restaurant and the food items in it...    
-Every restaurant is identified by a phone number with the exact pattern of 09########, where # is meant to represent any number.        
+Every restaurant is identified by a phone number with the exact pattern of 09########,with no spaces where # is meant to represent any number.        
 After the right number is received, the user will be prompted to enter a food item, and the bot hooks into the database to retrive details as required     
 and the process goes on and on...
 
