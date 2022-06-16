@@ -55,7 +55,7 @@ Currenntly, there are two restaurants in the database identified by the numbers 
 - If a number is provided, the bot will send a successful message and an order now button is sent,
 - User can now submit order with the touch or click of a button and this whole process repeats.
 
-##### For admin bot[beu admin bot](https://t.me/beu_admin_bot)
+##### For admin bot [beu admin bot](https://t.me/beu_admin_bot)
 
 - User must be an admin of a restaurant and the bot asks a number first to proceed for the future,
 - If correct number is provided, the bot will send a set of keyboard buttons to manage orders,
