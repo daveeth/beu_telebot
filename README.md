@@ -60,7 +60,7 @@ Currenntly, there are two restaurants in the database identified by the numbers 
 - User must be an admin of a restaurant and the bot asks a number first to proceed for the future,
 - If correct number is provided, the bot will send a set of keyboard buttons to manage orders,
 
-####To go beyond testing and and use the admin for your own restaurant, you must follow the following steps...
+#### To go beyond testing and and use the admin for your own restaurant, you must follow the following steps...
 
 - Grab a number by sending a request to the admin of this application to create a new restaurant identified by your number,
 - To contact admin, [ click here](https://t.me/Daw_94),
