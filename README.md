@@ -55,13 +55,16 @@ Currenntly, there are two restaurants in the database identified by the numbers 
 - If a number is provided, the bot will send a successful message and an order now button is sent,
 - User can now submit order with the touch or click of a button and this whole process repeats.
 
-##### [beu admin bot](https://t.me/beu_admin_bot)
+##### For admin bot[beu admin bot](https://t.me/beu_admin_bot)
 
-- User must grab a number by sending a request to the admin of this website to create a new restaurant identified by their number,
-- To contact admin, [ click here](https://t.me/Daw_94),
 - User must be an admin of a restaurant and the bot asks a number first to proceed for the future,
 - If correct number is provided, the bot will send a set of keyboard buttons to manage orders,
-- Currently, restaurant is created but no food is available, so they can use an add new food catalogue to populate the database with food items so that users can search them.
+
+####To go beyond testing and and use the admin for your own restaurant, you must follow the following steps...
+
+- Grab a number by sending a request to the admin of this application to create a new restaurant identified by your number,
+- To contact admin, [ click here](https://t.me/Daw_94),
+
 
 ## Frameworks used 
 
