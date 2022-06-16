@@ -35,7 +35,7 @@ Currenntly, there are two restaurants in the database identified by the numbers 
   - ጨጨብሳ
   - Coffee
 
- - ### Bot Restaurant
+ - ### Bot Restaurant(0930303030)
 
   - Electron
   - Photon
