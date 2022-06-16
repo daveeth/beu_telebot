@@ -24,9 +24,46 @@ and the process goes on and on...
 
 The second bot, however, is only for admin and owners of restaurants where they can see details of orders submitted by all users. Any user who does not
 know the number used to identify restaurants can not gain access to the full functionality of the bot.
-  
 
-## Frameworks used
+Currenntly, there are two restaurants in the database identified by the numbers 0968204729 and 0930303030 respectively and they offer the following foods.
+
+ - ### The Beu Restaurant, 0968204729
+
+  - Pizza
+  - Burger
+  - Lazagna
+  - ጨጨብሳ
+  - Coffee
+
+ - ### Bot Restaurant
+
+  - Electron
+  - Photon
+  - Python
+
+#### These restaurants are fictitious and are created initially for testing purposes and in no way represent real restaurants.
+
+#### This is how you can test them.
+
+##### For [beu delivery bot](https://t.me/our_beu_delivery_bot)
+
+- Enter one of the two numbers
+- The bot will identify if correct number is provided or send a message to enter the right number,
+- Now, if correct number is provided, the bot sends a message and prompts as user to enter a food item, the Amharic word can also be written to get that food item,
+- The food must belong in the food catalogue of the restaurant identified by the number entered previously,
+- If the bot can find the food, it will prompt again for quantity,
+- If a number is provided, the bot will send a successful message and an order now button is sent,
+- User can now submit order with the touch or click of a button and this whole process repeats.
+
+##### [beu admin bot](https://t.me/beu_admin_bot)
+
+- User must grab a number by sending a request to the admin of this website to create a new restaurant identified by their number,
+- To contact admin, [ click here](https://t.me/Daw_94),
+- User must be an admin of a restaurant and the bot asks a number first to proceed for the future,
+- If correct number is provided, the bot will send a set of keyboard buttons to manage orders,
+- Currently, restaurant is created but no food is available, so they can use an add new food catalogue to populate the database with food items so that users can search them.
+
+## Frameworks used 
 
 beu_telebot is programmed with Django on top of python
   
